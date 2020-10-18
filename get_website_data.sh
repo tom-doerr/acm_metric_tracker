@@ -1,1 +1,12 @@
 #!/bin/bash
+
+DESTINATION_DIR_RELATIVE_TO_HOME="Documents/acm_website_downloads"
+DESTINATION_DIR=~/$DESTINATION_DIR_RELATIVE_TO_HOME
+
+url="$1"
+cd ~
+mkdir -p $DESTINATION_DIR_RELATIVE_TO_HOME
+cd $DESTINATION_DIR
+wget $url
+
+
